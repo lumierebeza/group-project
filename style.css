@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color:white;
+    padding: 5px;
+}
+
+header h1 {
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+/* Welcome section styles */
+#welcome {
+    background-color: transparent; /* Make the background transparent */
+    padding: 40px;
+    text-align: center;
+    position: relative; /* Add position relative */
+}
+
+#welcome h1 {
+    color:rgb(30, 95, 193); /* Change text color to white */
+    font-size: 28px;
+}
+
+#welcome p {
+    color: rgb(30,95,193); /* Change text color to white */
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Social media section styles */
+#social {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-icons {
+    list-style-type: none;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li a {
+    color: rgb(12, 12, 12);
+    font-size: 24px;
+    text-decoration: none;
+    
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    
+}
+
+/* Background image for home page */
+body.home {
+    background-image: url('b1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th, table td {
+    border: 1px solid #c1bebe; /* Add borders to table cells */
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #5d4b4b; /* Add background color to table headers */
+}
+* Video section styles */
+#video {
+    position: relative;
+    width: 40%;
+    max-width: 100px; /* Adjust the maximum width as desired */
+    margin: 0 auto;
+    text-align: center;
+}
+
+#video video {
+    width: 40%; /*  width */
+    height: auto; /* Auto height to maintain aspect ratio */
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
