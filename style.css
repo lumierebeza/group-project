@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -138,7 +138,7 @@ table th {
     display: block;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-=======
+
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -277,6 +277,4 @@ table th {
     height: auto; /* Auto height to maintain aspect ratio */
     display: block;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
->>>>>>> 9b8a46c8ae5287998bc1ae0e54f352bcb4705e8a
-}
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);}
