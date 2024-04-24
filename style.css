@@ -103,7 +103,7 @@ footer {
 
 /* Background image for home page */
 body.home { 
-    background-color: pink;
+    background-image: url('b1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -279,27 +279,3 @@ table th {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-/* New styles for the "style-changed" class */
-.style-changed {
-    background-color: #ffc107; /* Change background color */
-    color: #333; /* Change text color */
-    border: 2px solid #333; /* Add border */
-    padding: 20px; /* Add padding */
-}
-/* Define the animation */
-@keyframes fadeInOut {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  
-  /* Apply the animation to the element */
-  .style-changed {
-    animation: fadeInOut 2s ease-in-out; /* Use the defined animation with a duration of 2 seconds */
-  }
