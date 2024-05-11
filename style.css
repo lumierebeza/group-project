@@ -34,7 +34,7 @@ nav ul li a {
 
 /* Main content styles */
 main {
-    padding: 20px;
+    padding: 10px;
 }
 
 /* Welcome section styles */
@@ -94,6 +94,7 @@ main {
 
 /* Footer styles */
 footer {
+    bottom: 0%;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -108,21 +109,7 @@ body.home {
     background-repeat: no-repeat;
 }
 
-/* Table styles */
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
 
-table th, table td {
-    border: 1px solid #1e1b1b; /* Add borders to table cells */
-    padding: 8px;
-    text-align: left;
-}
-
-table th {
-    background-color: #5d4b4b; /* Add background color to table headers */
-}
 * Video section styles */
 #video {
     position: relative;
@@ -153,15 +140,37 @@ table th {
 .animation {
     animation: slidein 1s ease forwards; /* Apply animation to the element */
 }
-#body{
-    border:2px Solid purple;
-    background-color: rgb(250, 245, 243);
-    width:80%;
-    padding: 40px;
-    margin:50px auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #1e1b1b;
-}
+
+
 .background{
     background-color: rgb(218, 215, 228);
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+.menu-item {
+    width: 20%; 
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.menu-item img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .menu-item {
+        width: 90%; 
+}
 }

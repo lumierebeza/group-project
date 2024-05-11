@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+    <!-- Linking external CSS stylesheet -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery library -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+         h2,
+         h4 {
+            color: #1e5fc1; /* Change text color */
+            text-align: center; /* Center-align text */
+        }
+
+        /* Styles for form container */
+        .contact-form {
+          max-width: 400px;
+          margin: 0 auto;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          background-color: #f9f9f9;
+        }
+
+        /* Styles for form input fields */
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+          width: 100%;
+          padding: 10px;
+          margin: 8px 0;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box; /* Ensures padding and border are included in width */
+        }
+
+        /* Styles for form labels */
+        .contact-form label {
+          font-weight: bold;
+        }
+
+        /* Styles for form submit button */
+        .contact-form button[type="submit"] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        /* Styles for form submit button on hover */
+        .contact-form button[type="submit"]:hover {
+          background-color: #45a049;
+        }
+
+        /* Styles for form error messages */
+        .contact-form .error-message {
+          color: red;
+          margin-bottom: 10px;
+        }
+        footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Social media icons styles */
+#social {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icons {
+    list-style-type: none;
+    
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li a {
+    color: rgb(12, 12, 12);
+    font-size: 24px;
+    text-decoration: none;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="about us.html">About us</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>CONTACT US</h2>
+    <h4>Need to get in touch with us? Either fill out the form with your inquiry or call us at 206-456-4668</h4>
+    <form id="contact-form" class="contact-form">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+     <!-- Social media icons -->
+     <section id="social">
+        <div> 
+            <ul class="social-icons">
+                <li><a href="https://twitter.com" target="_blank"><i class= "fab fa-twitter"></i></a></li>
+                <li><a href="https://instagram.com" target="_blank"><i class= "fab fa-instagram"></i></a></li>
+                <li><a href="https://facebook.com" target="_blank"><i class= "fab fa-facebook"></i></a></li>
+                <li><a href="https://whatsapp.com" target="_blank"><i class= "fab fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+    </section>
+</main>
+<footer>
+    <!-- Footer section -->
+    <p>&copy; 2024 CABO mexican restaurant. All rights reserved!</p>
+</footer>
+    <script>
+       function validateForm(event) {
+        event.preventDefault(); // prevent the form from submitting
+        // Get form inputs
+        var name = document.getElementById('name').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var message = document.getElementById('message').value.trim();
+        var response = document.getElementById('response');
+        // Check if inputs are empty
+        if (name === '' || email === '' || message === '') {
+            response.innerHTML = '<p class="error">Please fill in all the fields</p>';
+            alert('Please fill in all the fields');
+            return;
+        }
+        // Validate email format
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            response.innerHTML = '<p class="error">Please enter a valid email address</p>';
+            alert("Please enter a valid email address");
+            return;
+        }
+        // If all validations pass, submit the form (here you can send data to your server)
+        var formdata = new FormData(document.getElementById('contactForm'));
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'submit.PHP', true);
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                response.innerHTML = '<p>Form Submitted Successfully!</p>';
+                document.getElementById('contactForm').reset(); // clear form fields
+            } else {
+                response.innerHTML = '<p class="error">Error submitting form. Please try again later.</p>';
+            }
+        };
+        xhr.send(formdata);
+    }
+
+    // Add event listener to the form submit button
+    document.getElementById('contactForm').addEventListener('submit', validateForm);
+    </script>
+</body>
+</html>
