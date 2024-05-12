@@ -6,25 +6,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="style.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
         <!-- Linking external CSS stylesheet -->
         <style>
+             body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
             h1{
                 text-align: center;
-            }
-            .reserve-form{
-                width: 100%;
-                max-width: 400px;
-                margin-top: 100px;
-                display: flex;
-                flex-direction: column;
                 font-weight: bold;
-                transform: translate(0%, 15%);
-                margin: 0 auto;
-                border-radius: 5px;
-                border: 1px solid white;
-                
-    
+                color: rgb(0, 94, 255)
             }
+            .reserve-form {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            font-weight: bold;
+            transform: translate(0%, 6%);
+            margin: 0 auto;
+            border-radius: 5px;
+            border: 1px solid #ccc; /* Added border style */
+            padding: 20px; /* Added padding */
+            background-color: white;
+        }
             .reserve-form input[type="text"],
         .reserve-form input[type="email"],
         .reserve-form input[type="number"],
@@ -52,7 +61,7 @@
  #social {
     text-align: center;
     margin-top: 10px;
-    transform: translateY(180%);
+    transform: translateY(100%);
 }
 
 .social-icons {
@@ -77,7 +86,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px;
-    transform: translateY(200%); 
+    transform: translateY(110%); 
 }
 
         </style>
@@ -90,7 +99,7 @@ footer {
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
-                    <li><a href="current">Reservation</a></li>
+                    <li><a href="Reservation.html">Reservation</a></li>
                     <li><a href="aboutus.html">About us</a></li>
                     <li><a href="contactus.html">Contact us</a></li>
                 </ul>
@@ -134,5 +143,25 @@ footer {
         <!-- Footer section -->
         <p>&copy; 2024 CABO mexican restaurant. All rights reserved!</p>
     </footer>
+    <!-- JavaScript code -->
+    <script>
+        // JavaScript to handle form submission
+        document.getElementById('reservation-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form data
+            var formData = new FormData(this);
+
+            // Optional: You can validate form data here before submission
+            // For example, you can check if required fields are filled
+
+            // Simulate form submission
+            alert('Form submitted successfully!\n\nName: ' + formData.get('name') +
+                  '\nParty Size: ' + formData.get('party') +
+                  '\nDate and Time: ' + formData.get('reserve') +
+                  '\nPhone Number: ' + formData.get('phonenumber') +
+                  '\nEmail: ' + formData.get('email'));
+        });
+    </script>
     </body>
     </html>
